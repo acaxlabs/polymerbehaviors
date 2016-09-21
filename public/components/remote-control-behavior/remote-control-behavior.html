@@ -1,0 +1,24 @@
+<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+<script>
+    window.gdg = window.gdg || {};
+    gdg.remoteControlBehavior = {
+        ready: function() {
+            var config = {
+                apiKey: "AIzaSyD43a8q2NQZOCo_Bg3Gk7HGBH7M2g3oBuY",
+                authDomain: "polymerbehaviors.firebaseapp.com",
+                databaseURL: "https://polymerbehaviors.firebaseio.com",
+                storageBucket: "polymerbehaviors.appspot.com",
+            };
+            if (gdg.fb == undefined)
+                gdg.fb = firebase.initializeApp(config);
+            var opRef = gdg.fb.database().ref('opacity/');
+            var self = this; 
+            opRef.on('value', function(snapshot) {
+                self.updateOpacity(snapshot.val());
+            });
+        },
+        updateOpacity: function(value) {
+            this.$.myi.style.opacity = value/100;
+        }
+    };
+</script>

@@ -1,0 +1,16 @@
+<script>
+    window.gdg = window.gdg || {};
+    gdg.dragBehavior = {
+        listeners: {
+            track: "_onTrack"
+        },
+        ready: function() {
+            this.style.position = "absolute";
+            this.style.cursor = "pointer";
+        },
+        _onTrack: function(e) {
+            this.style.top = e.detail.y;
+            this.style.left = e.detail.x;
+        }
+    };
+</script>

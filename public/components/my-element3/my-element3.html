@@ -1,0 +1,16 @@
+<link rel="import" href="../polymer/polymer.html"/>
+<link rel="import" href="../add-behavior/add-behavior.html"/>
+<dom-module id="my-element3">
+    <template>
+        five plus four is {{result}}
+    </template>
+    <script>    
+        Polymer({
+            is: "my-element3", 
+            behaviors: [addBehavior], // notice this is an object not a string
+            ready: function() {
+                this.result = this.addNumbers(5, 4);
+            }
+        });
+    </script>   
+</dom-module>

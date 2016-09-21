@@ -1,0 +1,13 @@
+<link rel="import" href="../polymer/polymer.html"/>
+<link rel="import" href="../remote-control-behavior/remote-control-behavior.html"/>
+<dom-module id="remote-h1">
+    <template>
+        <h1 id="myi"><content></content></h1>
+    </template>
+    <script>
+        Polymer({
+            is: "remote-h1",
+            behaviors: [ gdg.remoteControlBehavior]
+        });
+    </script>
+</dom-module>

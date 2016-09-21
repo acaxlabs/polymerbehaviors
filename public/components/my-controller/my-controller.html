@@ -1,0 +1,23 @@
+<link rel="import" href="../polymer/polymer.html"/>
+<link rel="import" href="../paper-slider/paper-slider.html"/>
+<link rel="import" href="../polymerfire/firebase-app.html"/>
+<link rel="import" href="../polymerfire/firebase-document.html"/>
+<dom-module id="my-controller">
+    <template>
+        <firebase-app 
+            auth-domain="polymerbehaviors.firebaseapp.com"
+            database-url="https://polymerbehaviors.firebaseio.com/"
+            api-key="AIzaSyD43a8q2NQZOCo_Bg3Gk7HGBH7M2g3oBuY">
+        </firebase-app>
+        <firebase-document
+            path="/opacity"
+            data="{{opacity}}">
+        </firebase-document>
+        <paper-slider value="{{opacity}}"></paper-slider>
+    </template>
+    <script>
+        Polymer({
+            is: "my-controller"
+        });
+    </script>
+</dom-module>
