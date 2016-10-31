@@ -1,5 +1,7 @@
 # Polymer Behaviors
 Quick tutorial over [Polymer](https://www.polymer-project.org)
+Video of the [Meetup](https://www.youtube.com/watch?v=KGitWVOAEgs&feature=youtu.be)
+[Slides](https://goo.gl/wIvtyy) with more information
 
 ### Install 
 - Install Nodejs 5+. https://nodejs.org/en/download/
